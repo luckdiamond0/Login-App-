@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+	 <Content Include="UsersJson\**">
+		 <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	 </Content>
+	 <Content Include="Icons\**">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	 </Content>
+	 <Content Include="Fonts\**">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	 </Content>
+	 <None Remove="Fonts\OpenSans.ttf" />
+	 <None Remove="Icons\Close.png" />
+	 <None Remove="Icons\YourImage.png" />
+	 <None Remove="UsersJson\userdatatemplet.json" />
+    <PackageReference Include="ClickableTransparentOverlay" Version="9.1.0" />
+    <PackageReference Include="ImGui.NET" Version="1.90.1.1" />
+    <PackageReference Include="SixLabors.Fonts" Version="2.0.4" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.0.2" />
+    <PackageReference Include="Veldrid.ImGui" Version="5.72.0" />
+    <PackageReference Include="Vortice.D3DCompiler" Version="3.5.0" />
+    <PackageReference Include="Vortice.Direct3D11" Version="3.5.0" />
+    <PackageReference Include="Vortice.Mathematics" Version="1.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="UsersJson\userdatatemplet.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
