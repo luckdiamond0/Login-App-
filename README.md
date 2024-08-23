@@ -29,4 +29,5 @@ To set up and run this application locally, follow these steps:
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/luckdiamond0/Login-App-.git
-   
+
+> The LuckProfileImage.png is my old profile image but I'm too lazy to change
